@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Feed Local</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        img{
+            width: 50%;
+            height: 50%;
+        }
+
+        h1{
+            color: rgb(15, 6, 6);
+        }
+
+        h2{
+            color: rgb(140, 0, 255);
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+        .news {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .news h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .news p {
+            margin: 5px 0;
+        }
+        .news .date {
+            font-size: 0.9em;
+            color: gray;
+        }
+        .news img{
+            border: 2px solid red;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visor de Feed Local</h1>
+    <!-- input del tipo file que nos mostrará una ventana modal para cargar el archivo -->
+    <input type="file" id="fileInput" accept=".xml">
+    
+    <div id="output">
+        <!-- aqui va el contenido del archivo *.xml -->
+    </div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (!file) 
+                return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const content = e.target.result;
+                let outputElement = document.getElementById('output');
+                outputElement.innerHTML = ""; 
+                
+            if (file.name.endsWith('.xml')) {
+                    let parser = new DOMParser();
+                    let xmlDoc = parser.parseFromString(content, "text/xml");
+                    outputElement.appendChild(renderNews(xmlDoc));
+                } else {
+                    outputElement.textContent = "Formato no compatible.";
+                }
+            };
+            
+            reader.readAsText(file);
+        });
+        
+
+        
+        function renderNews(xmlDoc) {
+            let container = document.createElement("div");
+            let items = xmlDoc.getElementsByTagName("item");
+            
+            for (let item of items) {
+                let newsDiv = document.createElement("div");
+                newsDiv.classList.add("news");
+                
+                let title = item.getElementsByTagName("title")[0]?.textContent || "Sin título";
+                let description = item.getElementsByTagName("description")[0]?.textContent || "Sin descripción";
+                let pubDate = item.getElementsByTagName("pubDate")[0]?.textContent || "Fecha no disponible";
+                let contentEncoded = item.getElementsByTagName("content:encoded")[0]?.textContent || "";
+                let author = item.getElementsByTagName("author")[0]?.textContent || "";
+                let categoria = item.getElementsByTagName("categoria")[0]?.textContent || "";
+
+
+                let titleElement = document.createElement("h2");
+                titleElement.innerHTML = title;
+                
+                let descriptionElement = document.createElement("p");
+                descriptionElement.innerHTML = description;
+                
+                let dateElement = document.createElement("p");
+                dateElement.classList.add("date");
+                dateElement.textContent = pubDate;
+                
+                let contentElement = document.createElement("div");
+                contentElement.innerHTML = contentEncoded; // Esta instrucción es la mas importante ya que renderiza el html del feed
+
+                let authorContent = document.createElement("div");
+                contentElement.innerHTML = author; 
+
+                let categoriaContent = document.createElement("div");
+                contentElement.innerHTML = categoria; 
+
+                newsDiv.appendChild(titleElement);
+                newsDiv.appendChild(descriptionElement);
+                newsDiv.appendChild(dateElement);
+                newsDiv.appendChild(contentElement);
+                newsDiv.appendChild(categoriaContent); // Agrego dos items nuevos que son categoria 
+                newsDiv.appendChild(authorContent);    // y author
+
+                container.appendChild(newsDiv);
+            }
+            return container;
+        }
+    </script>
+</body>
+</html>

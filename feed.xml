@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog de Javier Martínez Díaz</title>
+    <link>https://javiermartinezdiaz.com</link>
+    <description>Sitio web dedicado a noticias de ámbito general</description>
+    <language>es</language>
+ 
+
+   
+    <item>
+      <title><![CDATA[ 
+              <h2>Mi primera noticia en RSS</h2>
+      ]]></title>
+      <link>https://localhost:8080</link>
+      <description>
+      <![CDATA[
+      <p>Es una prueba de una noticia personalizada
+      <img src="https://i.blogs.es/2ad525/windows-11-start/1024_2000.jpeg" alt="Eejmplo alt">
+      </p>
+      ]]>
+      </description>
+      <categoria>Pruebas</categoria>
+      <author>javiermartinezdiaz71@gmail.com</author>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 +0100</pubDate>
+    
+    </item>
+
+
+    <item>
+      <title><![CDATA[ 
+              <h2>Microsoft busca trabajadores en España con sueldos de hasta 180.000 euros</h2>
+      ]]></title>
+      <link>https://www.genbeta.com/actualidad/microsoft-busca-trabajadores-espana-sueldos-180-000-euros</link>
+      <description>
+      <![CDATA[
+      <p>El <a class="text-outboundlink" href="https://www.genbeta.com/a-fondo/empleos-buscados-google-cada-pais-esclarecedor-grafico-mundial-repleto-sorpresas" data-vars-post-title="Desde pilotos hasta YouTubers: las profesiones más populares en las búsquedas de Google en un revelador mapa" data-vars-post-url="https://www.genbeta.com/a-fondo/empleos-buscados-google-cada-pais-esclarecedor-grafico-mundial-repleto-sorpresas">sueño de muchas personas</a> es trabajar en una de las grandes tecnológicas que hay en nuestro planeta, como por ejemplo Google, Microsoft o Apple. Los desarrolladores o ingenieros informáticos son uno de los grandes objetivos que tienen estas empresas a la hora de reclutarlos, y sobre todo <strong>destacan por tener buenos sueldos.</strong> La propia Microsoft tiene disponible una serie de ofertas que son realmente atractivas.</p>
+      ]]>
+      </description>
+      <categoria>Tecnología</categoria>
+      <author>info@genbeta.com</author>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 +0100</pubDate>
+    </item>
+    
+    
+   <item>
+      <title><![CDATA[<h2>Caos en Palma por el corte de la Ma-19 al volcar un camión cisterna con miles de litros de combustible</h2>]]></title>
+      <link>https://www.ultimahora.es/sucesos/ultimas/2025/02/15/2326823/sucesos-mallorca-cortan-autopista-palma-tras-vuelco-camion-transportaba-6000-litros-combustible.html</link>
+      <description>
+      <![CDATA[
+      <p>El camión cisterna cargado con 6.000 litros de gasoil
+      <a title="Caos en Palma por el corte de la Ma-19 al volcar un camión cisterna con miles de litros de combustible" 
+      href="/sucesos/ultimas/2025/02/15/2326823/sucesos-mallorca-cortan-autopista-palma-tras-vuelco-camion-transportaba-6000-litros-combustible.html?utm_source=Related&amp;utm_medium=internal" 
+      data-model="Noticia" data-id="2326823"> ha volcado este sábado en la autopista de Llucmajor</a>,
+       a la altura del polígono de Son Malferit, tras sufrir<strong> una avería en las ruedas traseras</strong>,
+        según las primeras informaciones de los equipos de emergencias. 
+        El conductor ha perdido el control del vehículo y ha acabado volcando, pero en el accidente no ha sufrido más que heridas leves y ha salido del vehículo 
+        por su propio pie.
+        </p>
+      ]]>
+      </description>
+      <categoria>Noticias</categoria>
+      <author>redaccion@ultimahora.com</author>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 +0100</pubDate>
+    </item>
+ 
+ 
+
+
+  </channel>
+</rss>  
