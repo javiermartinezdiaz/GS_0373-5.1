@@ -9,9 +9,7 @@
 
    
     <item>
-      <title><![CDATA[ 
-             Mi primera noticia en RSS
-      ]]></title>
+      <title>Mi primera noticia en RSS</title>
       <link>https://localhost:8080</link>
       <description>
       <![CDATA[
@@ -28,9 +26,7 @@
 
 
     <item>
-      <title><![CDATA[ 
-             Microsoft busca trabajadores en España con sueldos de hasta 180.000 euros
-      ]]></title>
+    <title> Microsoft busca trabajadores en España con sueldos de hasta 180.000 euros</title>
       <link>https://www.genbeta.com/actualidad/microsoft-busca-trabajadores-espana-sueldos-180-000-euros</link>
       <description>
       <![CDATA[
@@ -44,7 +40,8 @@
     
     
    <item>
-      <title><![CDATA[<h2>Caos en Palma por el corte de la Ma-19 al volcar un camión cisterna con miles de litros de combustible]]></title>
+      <title>Caos en Palma por el corte de la Ma-19 al volcar un camión cisterna con miles de litros de combustible</title>
+      
       <link>https://www.ultimahora.es/sucesos/ultimas/2025/02/15/2326823/sucesos-mallorca-cortan-autopista-palma-tras-vuelco-camion-transportaba-6000-litros-combustible.html</link>
       <description>
       <![CDATA[
